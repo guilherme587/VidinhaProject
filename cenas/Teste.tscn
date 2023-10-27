@@ -131,6 +131,11 @@ centered = false
 
 [node name="Player_01" parent="." instance=ExtResource( 7 )]
 position = Vector2( 104, 89 )
+Velocidade = null
+JumpForce = null
+Vida = null
+Estamina = null
+Gravidade = null
 
 [node name="Muro" parent="." instance=ExtResource( 9 )]
 position = Vector2( 242, 155 )

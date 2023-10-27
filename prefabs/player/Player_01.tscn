@@ -4,7 +4,7 @@
 [ext_resource path="res://prefabs/player/scripts/Player_01.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 6.5 )
+extents = Vector2( 5, 5.5 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -41,11 +41,11 @@ animations = [ {
 
 [node name="Player_01" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 9
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3.5 )
+position = Vector2( 0, 2.5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -55,7 +55,7 @@ playing = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 0, 11 )
+cast_to = Vector2( 0, 9 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

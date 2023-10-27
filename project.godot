@@ -54,6 +54,7 @@ ui_up={
 2d_physics/layer_2="player"
 2d_physics/layer_3="inimigo"
 2d_physics/layer_4="item"
+2d_physics/layer_5="muro"
 
 [physics]
 

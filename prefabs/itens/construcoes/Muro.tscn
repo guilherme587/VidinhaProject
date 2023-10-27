@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://prefabs/itens/construcoes/scripts/Muro.gd" type="Script" id=1]
+[ext_resource path="res://sprites/frames/wall_edge_tshape_right.png" type="Texture" id=2]
+[ext_resource path="res://sprites/frames/wall_edge_top_right.png" type="Texture" id=3]
+[ext_resource path="res://prefabs/itens/construcoes/MuroMeio.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/frames/wall_top_left.png" type="Texture" id=5]
+[ext_resource path="res://sprites/frames/wall_outer_mid_left.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 10 )
+
+[node name="Muro" type="StaticBody2D" groups=["Muro"]]
+z_index = -1
+collision_layer = 16
+collision_mask = 0
+script = ExtResource( 1 )
+MuroMeio = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( -4, -16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( -15, 0 )
+texture = ExtResource( 6 )

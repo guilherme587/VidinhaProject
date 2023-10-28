@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://sprites/jungle tileset/jungle tileset.png" type="Texture" id=1]
 [ext_resource path="res://sprites/parallax background/plx-1.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://prefabs/player/Player_01.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/inimigos/DemonioGrande.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/itens/construcoes/Muro.tscn" type="PackedScene" id=9]
+[ext_resource path="res://prefabs/itens/coletaveis/Moeda.tscn" type="PackedScene" id=10]
+[ext_resource path="res://prefabs/itens/construcoes/PortalNormal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://prefabs/npc/Mendigo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://prefabs/npc/animais/Galinha.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -88,7 +92,7 @@ tile_set = SubResource( 6 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 720855, 0, 0, 720856, 0, 2, 720857, 0, 2, 720858, 0, 2, 720859, 0, 1, 720860, 0, 1, 720861, 0, 2, 720862, 0, 3, 720863, 0, 2, 720864, 0, 1, 720865, 0, 3, 720866, 0, 2, 720867, 0, 3, 720868, 0, 3, 720869, 0, 2, 720870, 0, 2, 720871, 0, 3, 720872, 0, 3, 720873, 0, 3, 720874, 0, 2, 720875, 0, 3, 720876, 0, 1, 720877, 0, 1, 720878, 0, 1, 720879, 0, 3, 720880, 0, 2, 720881, 0, 3, 720882, 0, 2, 720883, 0, 2, 720884, 0, 1, 720885, 0, 3, 720886, 0, 3, 720887, 0, 2, 720888, 0, 3, 720889, 0, 2, 720890, 0, 2, 720891, 0, 1, 720892, 0, 3, 720893, 0, 1, 720894, 0, 4, 655360, 0, 0, 655361, 0, 2, 655362, 0, 2, 655363, 0, 2, 655364, 0, 1, 655365, 0, 2, 655366, 0, 1, 655367, 0, 2, 655368, 0, 2, 655369, 0, 2, 655370, 0, 1, 655371, 0, 3, 655372, 0, 1, 655373, 0, 3, 655374, 0, 3, 655375, 0, 2, 655376, 0, 1, 655377, 0, 3, 655378, 0, 2, 655379, 0, 3, 655380, 0, 3, 655381, 0, 1, 655382, 0, 2, 655383, 0, 2, 655384, 0, 2, 655385, 0, 1, 655386, 0, 3, 655387, 0, 3, 655388, 0, 1, 655389, 0, 1, 655390, 0, 1, 655391, 0, 3, 655392, 0, 2, 655393, 0, 3, 655394, 0, 2, 655395, 0, 3, 655396, 0, 1, 655397, 0, 2, 655398, 0, 2, 655399, 0, 3, 655400, 0, 1, 655401, 0, 3, 655402, 0, 2, 655403, 0, 3, 655404, 0, 2, 655405, 0, 3, 655406, 0, 2, 655407, 0, 3, 655408, 0, 3, 655409, 0, 2, 655410, 0, 3, 655411, 0, 3, 655412, 0, 2, 655413, 0, 2, 655414, 0, 1, 655415, 0, 2, 655416, 0, 4 )
+tile_data = PoolIntArray( 589781, 0, 0, 524346, 0, 0, 720855, 0, 0, 720856, 0, 2, 720857, 0, 2, 720858, 0, 2, 720859, 0, 1, 720860, 0, 1, 720861, 0, 2, 720862, 0, 3, 720863, 0, 2, 720864, 0, 1, 720865, 0, 3, 720866, 0, 2, 720867, 0, 3, 720868, 0, 3, 720869, 0, 2, 720870, 0, 2, 720871, 0, 3, 720872, 0, 3, 720873, 0, 3, 720874, 0, 2, 720875, 0, 3, 720876, 0, 1, 720877, 0, 1, 720878, 0, 1, 720879, 0, 3, 720880, 0, 2, 720881, 0, 3, 720882, 0, 2, 720883, 0, 2, 720884, 0, 1, 720885, 0, 3, 720886, 0, 3, 720887, 0, 2, 720888, 0, 3, 720889, 0, 2, 720890, 0, 2, 720891, 0, 1, 720892, 0, 3, 720893, 0, 1, 720894, 0, 4, 655360, 0, 0, 655361, 0, 2, 655362, 0, 2, 655363, 0, 2, 655364, 0, 1, 655365, 0, 2, 655366, 0, 1, 655367, 0, 2, 655368, 0, 2, 655369, 0, 2, 655370, 0, 1, 655371, 0, 3, 655372, 0, 1, 655373, 0, 3, 655374, 0, 3, 655375, 0, 2, 655376, 0, 1, 655377, 0, 3, 655378, 0, 2, 655379, 0, 3, 655380, 0, 3, 655381, 0, 1, 655382, 0, 2, 655383, 0, 2, 655384, 0, 2, 655385, 0, 1, 655386, 0, 3, 655387, 0, 3, 655388, 0, 1, 655389, 0, 1, 655390, 0, 1, 655391, 0, 3, 655392, 0, 2, 655393, 0, 3, 655394, 0, 2, 655395, 0, 3, 655396, 0, 1, 655397, 0, 2, 655398, 0, 2, 655399, 0, 3, 655400, 0, 1, 655401, 0, 3, 655402, 0, 2, 655403, 0, 3, 655404, 0, 2, 655405, 0, 3, 655406, 0, 2, 655407, 0, 3, 655408, 0, 3, 655409, 0, 2, 655410, 0, 3, 655411, 0, 3, 655412, 0, 2, 655413, 0, 2, 655414, 0, 1, 655415, 0, 2, 655416, 0, 4 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -129,44 +133,69 @@ motion_mirroring = Vector2( 384, 0 )
 texture = ExtResource( 5 )
 centered = false
 
-[node name="Player_01" parent="." instance=ExtResource( 7 )]
-position = Vector2( 166, 67 )
-
-[node name="DemonioGrande2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 438, 135 )
-
-[node name="Muro" parent="." instance=ExtResource( 9 )]
-position = Vector2( 760, 156 )
-
-[node name="Muro2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 580, 156 )
-
 [node name="Muro3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 289, 156 )
 
 [node name="Muro4" parent="." instance=ExtResource( 9 )]
 position = Vector2( -54, 156 )
 
-[node name="Muro5" parent="." instance=ExtResource( 9 )]
-position = Vector2( -152, 156 )
+[node name="Player_01" parent="." instance=ExtResource( 7 )]
+position = Vector2( -389, 31 )
 
-[node name="Muro6" parent="." instance=ExtResource( 9 )]
-position = Vector2( -371, 156 )
+[node name="DemonioGrande2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 438, 135 )
 
-[node name="Muro7" parent="." instance=ExtResource( 9 )]
-position = Vector2( -418, 156 )
+[node name="Moeda" parent="." instance=ExtResource( 10 )]
+position = Vector2( 89, 111 )
 
-[node name="Muro8" parent="." instance=ExtResource( 9 )]
-position = Vector2( -309, 156 )
+[node name="Moeda2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 105, 111 )
 
-[node name="Muro9" parent="." instance=ExtResource( 9 )]
-position = Vector2( -267, 156 )
+[node name="PortalNormal" parent="." instance=ExtResource( 11 )]
+position = Vector2( -504, 146 )
+scale = Vector2( -1, 1 )
 
-[node name="Muro10" parent="." instance=ExtResource( 9 )]
-position = Vector2( 501, 156 )
+[node name="Galinha" parent="." instance=ExtResource( 13 )]
+position = Vector2( -250, 114 )
 
-[node name="Muro11" parent="." instance=ExtResource( 9 )]
-position = Vector2( -517, 158 )
+[node name="Galinha2" parent="." instance=ExtResource( 13 )]
+position = Vector2( -100, 120 )
 
-[node name="Muro12" parent="." instance=ExtResource( 9 )]
-position = Vector2( 624, 155 )
+[node name="Galinha3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 140, 130 )
+
+[node name="Galinha4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 337, 126 )
+
+[node name="Mendigo" parent="." instance=ExtResource( 12 )]
+position = Vector2( 709, 132 )
+
+[node name="Mendigo2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -353, 112 )
+
+[node name="Mendigo3" parent="." instance=ExtResource( 12 )]
+position = Vector2( -335, 113 )
+
+[node name="Mendigo4" parent="." instance=ExtResource( 12 )]
+position = Vector2( -361, 112 )
+
+[node name="Mendigo5" parent="." instance=ExtResource( 12 )]
+position = Vector2( -339, 101 )
+
+[node name="Mendigo6" parent="." instance=ExtResource( 12 )]
+position = Vector2( -391, 103 )
+
+[node name="Mendigo7" parent="." instance=ExtResource( 12 )]
+position = Vector2( -424, 106 )
+
+[node name="Mendigo8" parent="." instance=ExtResource( 12 )]
+position = Vector2( -388, 104 )
+
+[node name="Mendigo9" parent="." instance=ExtResource( 12 )]
+position = Vector2( -371, 103 )
+
+[node name="Mendigo10" parent="." instance=ExtResource( 12 )]
+position = Vector2( -409, 103 )
+
+[node name="Mendigo11" parent="." instance=ExtResource( 12 )]
+position = Vector2( -322, 107 )

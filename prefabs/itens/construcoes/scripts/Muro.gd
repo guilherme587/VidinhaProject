@@ -15,7 +15,6 @@ func _ready():
 		for node in get_parent().get_children():
 			if node.is_in_group("Muro") and node.name != self.name:
 				var distancia = abs(self.position.x - node.position.x)
-				print(distancia)
 				if menorDistancia == null:
 					if self.position.x > 0 and self.position.x > node.position.x:
 						menorDistancia = distancia

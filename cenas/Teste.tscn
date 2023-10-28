@@ -130,20 +130,43 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="Player_01" parent="." instance=ExtResource( 7 )]
-position = Vector2( 104, 89 )
-Velocidade = null
-JumpForce = null
-Vida = null
-Estamina = null
-Gravidade = null
-
-[node name="Muro" parent="." instance=ExtResource( 9 )]
-position = Vector2( 242, 155 )
-
-[node name="Muro2" parent="." instance=ExtResource( 9 )]
-position = Vector2( -33, 155 )
-scale = Vector2( -1, 1 )
-ConstruirMuro = false
+position = Vector2( 166, 67 )
 
 [node name="DemonioGrande2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 438, 135 )
+
+[node name="Muro" parent="." instance=ExtResource( 9 )]
+position = Vector2( 760, 156 )
+
+[node name="Muro2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 580, 156 )
+
+[node name="Muro3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 289, 156 )
+
+[node name="Muro4" parent="." instance=ExtResource( 9 )]
+position = Vector2( -54, 156 )
+
+[node name="Muro5" parent="." instance=ExtResource( 9 )]
+position = Vector2( -152, 156 )
+
+[node name="Muro6" parent="." instance=ExtResource( 9 )]
+position = Vector2( -371, 156 )
+
+[node name="Muro7" parent="." instance=ExtResource( 9 )]
+position = Vector2( -418, 156 )
+
+[node name="Muro8" parent="." instance=ExtResource( 9 )]
+position = Vector2( -309, 156 )
+
+[node name="Muro9" parent="." instance=ExtResource( 9 )]
+position = Vector2( -267, 156 )
+
+[node name="Muro10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 501, 156 )
+
+[node name="Muro11" parent="." instance=ExtResource( 9 )]
+position = Vector2( -517, 158 )
+
+[node name="Muro12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 624, 155 )

@@ -12,7 +12,7 @@ func _ready():
 
 
 func _process(delta):
-	if XAnterior != Body.global_position.x and abs(XAnterior - Body.global_position.x) > .3:
+	if XAnterior != Body.global_position.x and abs(XAnterior - Body.global_position.x) > .03:
 		AnimatorPlayer.flip_h = false if Body.global_position.x - XAnterior > 0 else true
 		AnimatorPlayer.play("andando")
 	else:

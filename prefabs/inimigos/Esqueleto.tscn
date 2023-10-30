@@ -1,0 +1,101 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://prefabs/componente/PerseguirPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/componente/AnimatedSpriteComponente.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/componente/Hit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/componente/HitBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/componente/Gravidade.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sprites/0x72_DungeonTilesetII_v1.6.png" type="Texture" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 6 )
+region = Rect2( 432, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 6 )
+region = Rect2( 448, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 6 )
+region = Rect2( 464, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 480, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 368, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 384, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 6 )
+region = Rect2( 400, 82, 16, 22 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 6 )
+region = Rect2( 416, 82, 16, 22 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "andando",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "parado",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 3, 4.5 )
+
+[node name="Esqueleto" type="KinematicBody2D" groups=["Inimigo", "NPC"]]
+collision_layer = 4
+collision_mask = 17
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 9 )
+animation = "parado"
+frame = 1
+playing = true
+
+[node name="Gravidade" parent="." instance=ExtResource( 5 )]
+cast_to = Vector2( 0, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4.5 )
+shape = SubResource( 10 )
+
+[node name="Hit" parent="." instance=ExtResource( 3 )]
+rotation = -1.57079
+Mascara = {
+"Inimigo": {
+"Mask Bit": 2,
+"habilitado": false
+},
+"Muro": {
+"Mask Bit": 4,
+"habilitado": true
+},
+"NPC": {
+"Mask Bit": 5,
+"habilitado": true
+},
+"Player": {
+"Mask Bit": 1,
+"habilitado": true
+}
+}
+Y = 10
+
+[node name="HitBox" parent="." instance=ExtResource( 4 )]
+
+[node name="AnimatedSpriteComponente" parent="." instance=ExtResource( 2 )]
+
+[node name="PerseguirPlayer" parent="." instance=ExtResource( 1 )]

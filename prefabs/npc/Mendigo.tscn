@@ -1,10 +1,13 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/0x72_DungeonTilesetII_v1.6.png" type="Texture" id=1]
 [ext_resource path="res://prefabs/componente/Gravidade.tscn" type="PackedScene" id=2]
 [ext_resource path="res://prefabs/componente/EntrarNaMuralha.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/componente/IAMovimentacao.tscn" type="PackedScene" id=4]
 [ext_resource path="res://prefabs/componente/AnimatedSpriteComponente.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/componente/FugirNPC.tscn" type="PackedScene" id=6]
+[ext_resource path="res://prefabs/componente/HitBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://prefabs/npc/scripts/Mendigo.gd" type="Script" id=8]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -54,13 +57,14 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.5, 8 )
 
-[node name="Mendigo" type="KinematicBody2D"]
+[node name="Mendigo" type="KinematicBody2D" groups=["NCP"]]
 collision_layer = 32
+script = ExtResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
 animation = "andando"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -75,3 +79,11 @@ cast_to = Vector2( 0, 11 )
 [node name="IAMovimentacao" parent="." instance=ExtResource( 4 )]
 
 [node name="AnimatedSpriteComponente" parent="." instance=ExtResource( 5 )]
+
+[node name="FugirNPC" parent="." instance=ExtResource( 6 )]
+DistanciaParaCorrer = 100.0
+Grupo = "Inimigo"
+NPC = true
+
+[node name="HitBox" parent="." instance=ExtResource( 7 )]
+Vida = 3.0

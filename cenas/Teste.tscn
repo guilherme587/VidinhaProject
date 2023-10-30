@@ -9,10 +9,10 @@
 [ext_resource path="res://prefabs/player/Player_01.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/inimigos/DemonioGrande.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/itens/construcoes/Muro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://prefabs/itens/coletaveis/Moeda.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/TelaDeJogo.tscn" type="PackedScene" id=10]
 [ext_resource path="res://prefabs/itens/construcoes/PortalNormal.tscn" type="PackedScene" id=11]
 [ext_resource path="res://prefabs/npc/Mendigo.tscn" type="PackedScene" id=12]
-[ext_resource path="res://prefabs/npc/animais/Galinha.tscn" type="PackedScene" id=13]
+[ext_resource path="res://prefabs/npc/itens/Flexa.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -139,63 +139,32 @@ position = Vector2( 289, 156 )
 [node name="Muro4" parent="." instance=ExtResource( 9 )]
 position = Vector2( -54, 156 )
 
-[node name="Player_01" parent="." instance=ExtResource( 7 )]
-position = Vector2( -389, 31 )
-
-[node name="DemonioGrande2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 438, 135 )
-
-[node name="Moeda" parent="." instance=ExtResource( 10 )]
-position = Vector2( 89, 111 )
-
-[node name="Moeda2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 105, 111 )
-
 [node name="PortalNormal" parent="." instance=ExtResource( 11 )]
 position = Vector2( -504, 146 )
 scale = Vector2( -1, 1 )
+Quantidade = 100
 
-[node name="Galinha" parent="." instance=ExtResource( 13 )]
-position = Vector2( -250, 114 )
+[node name="Player_01" parent="." instance=ExtResource( 7 )]
+position = Vector2( -131, 151 )
+Velocidade = 10000.0
 
-[node name="Galinha2" parent="." instance=ExtResource( 13 )]
-position = Vector2( -100, 120 )
-
-[node name="Galinha3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 140, 130 )
-
-[node name="Galinha4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 337, 126 )
+[node name="TelaDeJogo" parent="Player_01" instance=ExtResource( 10 )]
 
 [node name="Mendigo" parent="." instance=ExtResource( 12 )]
-position = Vector2( 709, 132 )
+position = Vector2( -426, 134 )
 
 [node name="Mendigo2" parent="." instance=ExtResource( 12 )]
-position = Vector2( -353, 112 )
+position = Vector2( -393, 136 )
 
-[node name="Mendigo3" parent="." instance=ExtResource( 12 )]
-position = Vector2( -335, 113 )
+[node name="DemonioGrande2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -478, 137 )
+z_index = -1
 
-[node name="Mendigo4" parent="." instance=ExtResource( 12 )]
-position = Vector2( -361, 112 )
+[node name="Flexa" parent="." instance=ExtResource( 13 )]
+position = Vector2( 14, 130 )
 
-[node name="Mendigo5" parent="." instance=ExtResource( 12 )]
-position = Vector2( -339, 101 )
+[node name="Flexa2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 470, 156 )
 
-[node name="Mendigo6" parent="." instance=ExtResource( 12 )]
-position = Vector2( -391, 103 )
-
-[node name="Mendigo7" parent="." instance=ExtResource( 12 )]
-position = Vector2( -424, 106 )
-
-[node name="Mendigo8" parent="." instance=ExtResource( 12 )]
-position = Vector2( -388, 104 )
-
-[node name="Mendigo9" parent="." instance=ExtResource( 12 )]
-position = Vector2( -371, 103 )
-
-[node name="Mendigo10" parent="." instance=ExtResource( 12 )]
-position = Vector2( -409, 103 )
-
-[node name="Mendigo11" parent="." instance=ExtResource( 12 )]
-position = Vector2( -322, 107 )
+[node name="Flexa3" parent="." instance=ExtResource( 13 )]
+position = Vector2( -146, 74 )

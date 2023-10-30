@@ -1,7 +1,5 @@
 extends StaticBody2D
 
-export var Vida:float = 10
-export var Defesa:float = 1.1
 export var MuroMeio:PackedScene
 export var ConstruirMuro:bool = true
 
@@ -40,16 +38,3 @@ func _ready():
 			novoMuroMeio.set_z_index(-2)
 			get_parent().add_child(novoMuroMeio)
 			yield(get_tree().create_timer(0.3), "timeout")
-
-
-#func _process(delta):
-#	pass
-
-
-func Apanhar(dano):
-	if Vida > 0:
-		Vida -= dano
-	else:
-		$CollisionShape2D.disabled = true
-		$Sprite.texture = "res://sprites/frames/wall_fountain_top_3.png"
-		$Sprite2.texture = null

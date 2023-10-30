@@ -10,14 +10,14 @@ onready var Player:AnimationPlayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
 	self.position.y = 146
 	Player.play("padrao")
 	var inimigosCont = len(Inimigo)
 	for i in range(Quantidade):
-		var novoInimigo = Inimigo[rand_range(0, inimigosCont -1)].instance()
+		var novoInimigo = Inimigo[rand_range(0, inimigosCont)].instance()
 		novoInimigo.global_position = SpawPonit.global_position
-		yield(get_tree().create_timer(1.2), "timeout")
+		yield(get_tree().create_timer(rand_range(0.09, 1.2)), "timeout")
 		get_parent().add_child(novoInimigo)
 
 
